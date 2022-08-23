@@ -1,7 +1,7 @@
 const container = document.querySelector('.container');
 // permettre à notre js d'écouter les values données  dans notre input number
 const sizeEl = document.querySelector('.size');
-const size = sizeEl.value;
+let size = sizeEl.value;
 const color = document.querySelector('.color');
 const resetBtn = document.getElementById('reset')
 
@@ -41,6 +41,21 @@ window.addEventListener("mousedown",function(){
 
 window.addEventListener("mouseup",function(){
     draw = false
+})
+
+// reset function
+function resetCanva(){
+    container.innerHTML ='';
+    Grid(size)
+}
+
+// ecoute la fonction resetCanva
+resetBtn.addEventListener('click', resetCanva);
+
+// resize the canva when typing it
+sizeEl.addEventListener('keyup',function(){
+    size = sizeEl.value
+    resetCanva()
 })
 
 Grid(size)
