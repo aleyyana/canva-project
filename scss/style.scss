@@ -9,12 +9,36 @@ html,body{
 }
 
 body{
-    background-color: #D7B9AE;
+    background-color: #012623;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color:#fff;
+
+    .title{
+        font-weight: 600;
+        font-size: 40px;
+    }
+
+    .content{
+        font-weight: 200;
+
+         span{
+            color:#CED3F2;
+            font-weight: 400;
+         }
+    }
+}
+
 
 .navbar {
     padding: 1em;
@@ -52,7 +76,7 @@ body{
     gap: 3px;
     padding: 3px;
 
-    .pixel{
+    .pixelDraw{
         background-color: #262626;
         border-radius: 2px;
 

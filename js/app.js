@@ -1,10 +1,12 @@
 const container = document.querySelector('.container');
 // permettre à notre js d'écouter les values données  dans notre input number
-const sizeEl = document.querySelector('.size');
+const sizeEl = document.querySelector('.sizeCanva');
 let size = sizeEl.value;
-const color = document.querySelector('.color');
+const colorPick = document.getElementById('color');
 const resetBtn = document.getElementById('reset')
 
+
+// empêche de dessiner sur le canva
 let draw = false
 
 // Fonction permettant de lire notre input afin de créer la grille souhaitée. 
@@ -18,17 +20,17 @@ function Grid(size){
     for(let i=0; i < size * size; i++) {
     // création de l'élement div avec la classe 'pixel' et ajout du nouveau element à container
         const div = document.createElement('div')
-        div.classList.add('pixel')
+        div.classList.add('pixelDraw')
 
         // function pour dessiner
         div.addEventListener('mouseover',function(){
             // empêche de dessiner si on ne clique pas avec la souris
             if(!draw) return
-            div.style.backgroundColor = color.value
+            div.style.backgroundColor = colorPick.value
         })
         // permet de dessiner avec toutes les couleurs values et de recolorier sur ce qu'on a déja colorié
         div.addEventListener('mousedown',function(){
-            div.style.backgroundColor = color.value
+            div.style.backgroundColor = colorPick.value
         })
         container.appendChild(div)
     }

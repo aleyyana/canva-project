@@ -9,11 +9,31 @@ html, body {
 }
 
 body {
-  background-color: #D7B9AE;
+  background-color: #012623;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+.text .title {
+  font-weight: 600;
+  font-size: 40px;
+}
+.text .content {
+  font-weight: 200;
+}
+.text .content span {
+  color: #CED3F2;
+  font-weight: 400;
 }
 
 .navbar {
@@ -49,7 +69,7 @@ body {
   gap: 3px;
   padding: 3px;
 }
-.container .pixel {
+.container .pixelDraw {
   background-color: #262626;
   border-radius: 2px;
 }/*# sourceMappingURL=style.css.map */

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Your future drawing canvas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,10 +12,18 @@
     <title>Your canvas </title>
 </head>
 <body>
+    <div class="text">
+        <h1 class="title">Your drawing, your choice</h1>
+        <p class="content">Choose the <span>color</span> that you want with the <span>color picker</span>, choose the <span>size</span> of your canvas<br>
+           and draw like you're picasso. (PS: Don't worry, you can only draw if you click on your <span>mouse</span> so you can control everything) 
+        </p>     
+    </div>
     <div class="navbar">
         <button id="reset" class="btn">Reset</button>
-        <input type="color" value="#BF785E" class="color">
-        <input type="number" value ="30" class="size">
+        <label for="color"></label>
+        <input id="color" type="color" value="#275954" class="color">
+        <label for="number"></label>
+        <input id="number" type="number" value ="30" class="sizeCanva" max="200">
     </div>
 
     <div class="container">
