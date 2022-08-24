@@ -3,9 +3,10 @@ const container = document.querySelector('.container');
 const sizeEl = document.querySelector('.sizeCanva');
 let size = sizeEl.value;
 const colorPick = document.getElementById('color');
-const resetBtn = document.getElementById('reset')
+const resetBtn = document.getElementById('reset');
 
 
+let deviceType = "";
 // empêche de dessiner sur le canva
 let draw = false
 
@@ -23,13 +24,13 @@ function Grid(size){
         div.classList.add('pixelDraw')
 
         // function pour dessiner
-        div.addEventListener('mouseover',function(){
+        div.addEventListener("mouseover",function(){
             // empêche de dessiner si on ne clique pas avec la souris
             if(!draw) return
-            div.style.backgroundColor = colorPick.value
+                div.style.backgroundColor = colorPick.value
         })
         // permet de dessiner avec toutes les couleurs values et de recolorier sur ce qu'on a déja colorié
-        div.addEventListener('mousedown',function(){
+        div.addEventListener("mousedown",function(){
             div.style.backgroundColor = colorPick.value
         })
         container.appendChild(div)
@@ -44,6 +45,8 @@ window.addEventListener("mousedown",function(){
 window.addEventListener("mouseup",function(){
     draw = false
 })
+
+
 
 // reset function
 function resetCanva(){
